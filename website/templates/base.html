@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<title>Joe's Website</title>
+
+	<link rel="icon" href="/static/img/favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<link rel="stylesheet" href="/static/css/main.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+	
+<body>
+
+	<!-- Navbar -->
+	<nav id="nav_bar">
+	<div class="nav-wrapper teal lighten-1">
+		<a href="/" class="brand-logo hide-on-med-and-down" id="my-name">Joe Essig</a>
+		<ul class="right">
+			<li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">menu</i></a></li>
+		</ul>
+		<ul id="dropdown1" class="dropdown-content">
+		  <li><a href='/'>Home</a></li>	
+		  <li><a href="/about">About</a></li>
+		  <li class="divider"></li>
+		  <li><a href="/contact">Hire Joe</a></li>
+		</ul>
+	</div>
+	</nav>
+
+	<!-- Contact Button -->
+	<div class="fixed-action-btn vertical click-to-toggle" style="bottom: 2em; right: 1em;">
+		<a class="btn-floating btn-large grey">
+		    <i class="material-icons">work</i>
+		</a>
+		<ul>
+		    <li><a class="btn-floating red" href="mailto:essigjnp@gmail.com" title="Email Joe"><i class="material-icons">email</i></a></li>
+		    <li><a href="/about" class="btn-floating yellow darken-1" title="About Joe"><i class="material-icons">perm_identity</i></a></li>
+		    <li><a href="/about#map" class="btn-floating green" title="Where is Joe located?"><i class="material-icons">my_location</i></a></li>
+		    <li><a href="/contact" class="btn-floating blue"><i class="material-icons" title="Hire Joe">web</i></a></li>
+		</ul>
+  	</div>
+
+{% block content %}
+{% endblock %}
+
+	<!-- Footer -->
+	<footer class="page-footer teal lighten-1" id="foot">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Web Development by Joe</h5>
+                <p class="grey-text text-lighten-4">Your own modern, beautiful website.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com/jessigweb">GitHub</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">LinkedIn</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container hide-on-med-and-down" id="quote">
+	            “Everything should be made as simple as possible, but no simpler.” - Albert Einstein
+            </div>
+          </div>
+    </footer>
+
+</body>
+
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script src="/static/js/javascript.js"></script>
+
+</html>

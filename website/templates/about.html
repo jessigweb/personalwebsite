@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- About section -->
+<main>
+	<div class="container">
+		<div class="col s12" id="about">
+			<div class="col s12" id="image-container">
+				<img src="/static/img/joe2.jpg" class="circle responsive-img z-depth-2" id="portrait" />
+			</div>
+			<h1>About me</h1>
+			<p>Above all, I love to learn. The web is changing every day and it is very exciting to learn about what's new.</p>
+			<p>As Web Content Manager at Spring Hill College, I have had the opportunity to work with a great variety of web technologies and practices. I am a self-taught developer with a passion for full-stack web development.</p>
+			<p>Specializing in Django on the back-end, and a variety of front-end tools such as Bootstrap and jQuery, I work to create integrated web applications that serve the critical function of delivering content to the end user.</p>
+			<p>My goal is always to deliver quality projects, at an affordable price, and in a timely manner.</p>
+
+			<h1>About this site</h1>
+			<p>This beautiful website you are currently visiting was built with Django and MaterializeCSS.</p>
+		</div>
+	</div>
+</main>
+
+<!-- Google Iframe -->
+<section>
+	<div class="container">
+		<h1 id="map">Where am I?</h1>
+		<div class="google-maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d445428.71468449273!2d-88.24636139595577!3d30.592684313435708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x889a4e1df14cf8a9%3A0x4ce80e5477899e1a!2sMobile%2C+AL!5e0!3m2!1sen!2sus!4v1478203834906" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+</section>
+
+<!-- Hire Joe -->
+<section>
+	<a href="/contact">
+		<h3 class="hire-joe">Hire Joe ></h3>
+	</a>
+</section>
+
+{% endblock %}

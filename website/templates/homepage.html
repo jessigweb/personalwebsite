@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- My name -->
+<main class="hero">
+	<div class="col s12">
+		<h1>Responsive Web Applications</h1>
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li> 
+			<li>JavaScript</li>
+			<li class="last">Django</li>
+		</ul> 
+	</div>
+</main>
+	
+<!-- Tagline -->
+<section class="intro valign-wrapper z-depth-1">
+	<div class="container">
+		<p class="valign">My passion and skills focus on developing clean, intuitive web applications that provide a positive user experience.</p>
+	</div>
+</section>
+
+<!-- On-line learning -->
+<section class="online_learning">
+	<h2>On-line Learning</h2>
+	<div class="container">
+		<h3 id="code-school">CodeSchool</h3>
+			<div class="row">
+				<div class="col s12">
+					 {% for x in badges %}
+					 <!-- Turn into link to public course url using model -->
+					  <div class="chip z-depth-1" id="chips">		  	
+					    <img src="{{ x.badge }}" />
+					    {{ x.course }}
+					  </div>
+					 {% endfor %}
+			 	</div>
+			</div>
+	</div>		 
+	<div class="container">
+		<h3 id="CodeAcademy">CodeAcademy</h3>
+			<div class="row">
+				<div class="col s12">
+				   <ul class="collapsible" data-collapsible="accordion">
+				   {% for y in languages %}
+				    <li>
+				      <div class="collapsible-header hoverable">{{ y.language }}</div>
+				      <div class="collapsible-body"><p>{{ y.description }}</p></div>
+				    </li>
+				    {% endfor %}
+				   </ul>
+				</div>
+			</div>
+	</div>
+</section>
+
+<!--Work Experience-->
+<section class="z-depth-1">
+	<div class="valign-wrapper">
+	<div class="resume">
+		<h2>Work Experience</h2>
+		<!-- Modal Trigger -->
+		<div class="center-align"><a class="modal-trigger waves-effect waves-light btn" href="#modal1">View Resume</a></div>
+		<!-- Modal Structure -->
+		  <div id="modal1" class="modal modal-fixed-footer">
+		    <div class="modal-content">
+		    	<div class="row">
+		    		<div class="col s12 m8 l8">
+		    			<h1>Joseph Essig</h1>
+		    		</div>
+		    		<div class="col l4 hide-on-med-and-down">
+		    			<p>essigjnp@gmail.com</p>
+		    			<a href="https://github.com/jessigweb">Github</a>
+		    		</div>
+		    	</div>
+		    	<div class="resume_divider"></div>
+		    	<section class="row">
+		    		<div class="col l4 hide-on-med-and-down">
+		    			<h2 class="left-align">Education</h2>
+		    		</div>
+		    		<div class="col s12 m12 l8">
+		    			<h3><em>Master of Education</em></h3>
+		    			<p>Southern Illinois University, Carbondale, IL</p>
+		    			<p>2012-2014</p>
+						<h3><em>Bachelor of Science</em></h3>
+						<p>MacMurray College, Jacksonville, IL</p>
+						<p>2008-2012</p>
+		    		</div>
+		    	</section>
+		    	<div class="resume_divider"></div>
+		    	<section class="row">
+		    		<div class="col l4 hide-on-med-and-down">
+		    			<h2 class="left-align">Professional Experience</h2>
+		    		</div>
+		    		<div class="col s12 m12 l8">
+		    			<h3><em>Web Content Manager - Spring Hill College</em></h3>
+		    			<p>January 2016 - Present</p>
+		    			<p>
+		    				Within the Office of Information Technology, I work with the Director of Web Services on the college's web presence.    				
+		    			</p>
+		    			<h3><em>Coordinator of Residence Life & Intramurals - MacMurray College</em></h3>
+		    			<p>March 2015 - December 2015</p>
+		    			<p>
+		    				Managed the Residence Life department at MacMurray College which consisted of 
+		    				supervising 3 part-time Residence Directors, 12 Resident Assistants, and housing for 250-300 on-campus residents.    				
+		    			</p>
+		    			<h3><em>Area Coordinator - Spring Hill College</em></h3>
+		    			<p>May 2014 - March 2015</p>
+		    			<p>
+		    				Supervised two pod-style residence halls, consisting of 285 residents, and implemented Spring Hill College’s Learning Community Program.   				
+		    			</p>
+		    		</div>
+		    	</section>
+		    	<div class="resume_divider"></div>
+		    	<section class="row">
+		    		<div class="col l4 hide-on-med-and-down">
+		    			<h2 class="left-align">Technical</h2>
+		    		</div>
+		    		<div class="col s12 m12 l8">
+		    			<ul>
+		    				<li>HTML5</li>
+		    				<li>CSS3</li>
+		    				<li>Javascript</li>
+		    				<li>Python</li>
+		    				<li>Django</li>
+		    				<li>jQuery</li>
+		    				<li>Material Design</li>
+		    				<li>Front-End Frameworks</li>
+		    				<li>Git</li>
+		    				<li>Linux</li>
+		    				<li>OS X</li>
+		    			</ul>
+		    		</div>
+		    	</section>
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+		    </div>
+		  </div>
+	</div>
+	</div>
+</section>
+
+<!-- Skills -->
+<section>
+	<h2>Skills</h2>
+	<div class="carousel">
+		<a class="carousel-item" href="#one!"><img src="/static/img/html.png"></a>
+		<a class="carousel-item" href="#two!"><img src="/static/img/css.png"></a>
+		<a class="carousel-item" href="#three!"><img src="/static/img/javascript.png"></a>
+		<a class="carousel-item" href="#four!"><img src="/static/img/materialize.jpg"></a>
+		<a class="carousel-item" href="#five!"><img src="/static/img/jquery.gif"></a>
+		<a class="carousel-item" href="#six!"><img src="/static/img/python.png"></a>
+		<a class="carousel-item" href="#seven!"><img src="/static/img/bootstrap.png"></a>
+		<a class="carousel-item" href="#eight!"><img src="/static/img/django.png"></a>
+	</div>
+</section>
+
+<!-- About Me -->
+<section>
+	<a href="/about">
+		<h3 class="about-me">About Joe ></h3>
+	</a>
+</section>
+
+{% endblock %}
