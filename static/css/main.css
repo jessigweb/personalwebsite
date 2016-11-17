@@ -25,7 +25,7 @@ nav .brand-logo {
 
 .hero {
 	text-align: center;
-	height: 30em;
+	height: 40rem;
 	background-color: #26a69a;
 	color: white;
 	padding-top: 8%;
@@ -47,7 +47,7 @@ nav .brand-logo {
 }
 
 .intro {
-	height: 200px;
+	height: 20rem;
 	text-align: center;
 	font-size: 1.2em;
 	background-color: #fafafa;
